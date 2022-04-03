@@ -7,7 +7,9 @@ const Services = () => {
   useEffect(() => {
     const getData = async () => {
       try {
-        const { data } = await axios.get(`/service`);
+        const { data } = await axios.get(
+          `https://dcl-mern-app.herokuapp.com/service`
+        );
         if (data.services) {
           setServices(data.services);
         }
@@ -27,7 +29,11 @@ const Services = () => {
           <>
             {services.map((s) => (
               <div className="col-md-4 text-center">
-                <img src={`${s.image}`} alt="service" className="w-50" />
+                <img
+                  src={`https://dcl-mern-app.herokuapp.com${s.image}`}
+                  alt="service"
+                  className="w-50"
+                />
                 <p>{s.title}</p>
               </div>
             ))}

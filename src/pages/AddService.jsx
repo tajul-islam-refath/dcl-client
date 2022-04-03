@@ -20,7 +20,10 @@ const Addservice = () => {
     formdata.append("service-image", img);
 
     try {
-      await axios.post(`/service/add-service`, formdata);
+      await axios.post(
+        `https://dcl-mern-app.herokuapp.com/service/add-service`,
+        formdata
+      );
       alert("Success !");
       navigate("/admin/service-list");
     } catch (e) {

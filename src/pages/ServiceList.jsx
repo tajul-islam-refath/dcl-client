@@ -7,7 +7,7 @@ const Servicelist = () => {
 
   const deleteService = async (id) => {
     try {
-      await axios.delete(`/service/${id}`);
+      await axios.delete(`https://dcl-mern-app.herokuapp.com/service/${id}`);
       setIsDelete(true);
       alert("Delete Success !");
     } catch (e) {
@@ -18,7 +18,9 @@ const Servicelist = () => {
   useEffect(() => {
     const getData = async () => {
       try {
-        const { data } = await axios.get(`/service`);
+        const { data } = await axios.get(
+          `https://dcl-mern-app.herokuapp.com/service`
+        );
         if (data.services) {
           setServices(data.services);
         }
@@ -54,7 +56,7 @@ const Servicelist = () => {
                     <td>{s.title}</td>
                     <td>
                       <img
-                        src={`${s.image}`}
+                        src={`https://dcl-mern-app.herokuapp.com${s.image}`}
                         className="w-25 h-25 d-inline"
                         alt="Service"
                       />

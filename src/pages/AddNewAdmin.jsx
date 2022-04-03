@@ -14,7 +14,10 @@ const AddNewAdmin = () => {
       password,
     };
     try {
-      await axios.post(`/admin/add-admin`, admin);
+      await axios.post(
+        `https://dcl-mern-app.herokuapp.com/admin/add-admin`,
+        admin
+      );
       setName("");
       setEmail("");
       setPassword("");

@@ -9,7 +9,7 @@ const Navbar = () => {
 
   const logOut = async () => {
     try {
-      await axios.get(`/admin/logout`);
+      await axios.get(`https://dcl-mern-app.herokuapp.com/admin/logout`);
       alert("Admin Logout  Success");
       setAdmin({});
       setIsAdmin(false);

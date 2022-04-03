@@ -24,7 +24,10 @@ const Adminlogin = () => {
 
     // console.log(admin)
     try {
-      const { data } = await axios.post(`/admin/login`, admin);
+      const { data } = await axios.post(
+        `https://dcl-mern-app.herokuapp.com/admin/login`,
+        admin
+      );
       console.log(data);
       setAdmin(data.admin);
       setIsAdmin(true);

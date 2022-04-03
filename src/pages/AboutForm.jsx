@@ -21,7 +21,10 @@ const Aboutform = () => {
     formdata.append("about-image", img);
 
     try {
-      await axios.post(`/about/create`, formdata);
+      await axios.post(
+        `https://dcl-mern-app.herokuapp.com/about/create`,
+        formdata
+      );
       setIsCreate(true);
       alert("Success !");
     } catch (e) {
@@ -31,7 +34,7 @@ const Aboutform = () => {
 
   const deletePost = async () => {
     try {
-      await axios.delete(`/about/${id}`);
+      await axios.delete(`https://dcl-mern-app.herokuapp.com/about/${id}`);
       setIsDelete(true);
       setAbout("");
       setPrevImage("");
@@ -45,7 +48,9 @@ const Aboutform = () => {
   useEffect(() => {
     const getData = async () => {
       try {
-        const { data } = await axios.get(`/about`);
+        const { data } = await axios.get(
+          `https://dcl-mern-app.herokuapp.com/about`
+        );
         if (data.post) {
           setAbout(data.post.about);
           setPrevImage(data.post.image);

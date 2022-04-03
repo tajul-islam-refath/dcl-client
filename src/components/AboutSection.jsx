@@ -7,7 +7,9 @@ const AboutSection = () => {
   useEffect(() => {
     const getData = async () => {
       try {
-        const { data } = await axios.get(`/about`);
+        const { data } = await axios.get(
+          `https://dcl-mern-app.herokuapp.com/about`
+        );
         if (data.post) {
           setPost(data.post);
         }
@@ -27,7 +29,11 @@ const AboutSection = () => {
         {post.length != 0 ? (
           <>
             <div className="col-md-6 px-5">
-              <img src={`${post.image}`} className="w-100" alt="" />
+              <img
+                src={`https://dcl-mern-app.herokuapp.com${post.image}`}
+                className="w-100"
+                alt=""
+              />
             </div>
             <div className="col-md-6">
               <h1>Who we are ?</h1>
