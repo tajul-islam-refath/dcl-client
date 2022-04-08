@@ -19,6 +19,7 @@ const Services = () => {
     };
     getData();
   }, []);
+  console.log(services);
   return (
     <div className="container">
       <h1 className="text-center my-5" style={{ color: "#01cfbe" }}>

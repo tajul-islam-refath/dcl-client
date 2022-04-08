@@ -101,7 +101,7 @@ const Aboutform = () => {
               </div>
               {prevImage && (
                 <img
-                  src={`${prevImage}`}
+                  src={`https://dcl-mern-app.herokuapp.com${prevImage}`}
                   alt="About"
                   className="w-50 h-50 my-5 d-block"
                 />

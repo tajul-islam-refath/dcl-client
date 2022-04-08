@@ -34,6 +34,7 @@ const Servicelist = () => {
       setIsDelete(false);
     }
   }, [isDelete]);
+  console.log(services);
 
   return (
     <div className="container pt-5">
